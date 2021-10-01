@@ -1,5 +1,5 @@
 import { useRef } from "react";
-// import Swiper core and required modules
+// Import Swiper core and required modules
 import SwiperCore, { A11y } from "swiper";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,13 +9,11 @@ import classNames from "classnames";
 
 import Image from "next/image";
 
-// install Swiper modules
+// Install Swiper Modules
 SwiperCore.use([A11y]);
 
 export default function BrandSlider(props) {
   const { className } = props;
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
   return (
     <Swiper
       className={classNames("w-full", className)}
@@ -25,10 +23,6 @@ export default function BrandSlider(props) {
       loop={false}
       loopAdditionalSlides={10}
       edgeSwipeDetection={true}
-      // onBeforeInit={(swiper) => {
-      //   swiper.params.navigation.prevEl = prevRef.current;
-      //   swiper.params.navigation.nextEl = nextRef.current;
-      // }}
       grabCursor={true}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
