@@ -8,7 +8,6 @@ import { id } from "date-fns/locale";
 import CommentCard from "@/components/Card/CommentCard";
 import ArticleCard from "@/components/Card/ArticleCard";
 import BrandSlider from "@/components/Slider/BrandSlider";
-import Image from "next/image";
 export default function Home() {
   return (
     <MainLayout>
@@ -179,7 +178,7 @@ export default function Home() {
           <p>Atau mau ajak kerja sama ?</p>
         </div>
         <div className="flex flex-col">
-          <div>partner@ngeunah.tv</div>
+          <div><a href="mailto:partner@ngeunah.tv">partner@ngeunah.tv</a></div>
           <div>0838 9253 0498</div>
         </div>
       </section>
