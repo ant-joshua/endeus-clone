@@ -37,7 +37,7 @@ export default function CommentCard(props) {
             />
           </div>
           <div className="pl-3 py-2 text-gray-500 text-sm">
-            Daun Ubi Tumbuk ala tapanuli
+            Daun Ubi Tumbuk ala Tapanuli
           </div>
         </div>
       </div>
