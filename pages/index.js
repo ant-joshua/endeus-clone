@@ -1,15 +1,58 @@
-import Head from "next/head";
-import MainLayout from "@/components/MainLayout";
-import RecipeCategoryCard from "@/components/Card/RecipeCategoryCard";
-import RecipeCard from "@/components/Card/RecipeCard";
-import CampaignSlider from "@/components/Slider/CampaignSlider";
-import format from "date-fns/format";
-import { id } from "date-fns/locale";
-import CommentCard from "@/components/Card/CommentCard";
-import ArticleCard from "@/components/Card/ArticleCard";
-import BrandSlider from "@/components/Slider/BrandSlider";
+import Head from 'next/head';
+import MainLayout from '@/components/MainLayout';
+import RecipeCategoryCard from '@/components/Card/RecipeCategoryCard';
+import RecipeCard from '@/components/Card/RecipeCard';
+import CampaignSlider from '@/components/Slider/CampaignSlider';
+import format from 'date-fns/format';
+import { id } from 'date-fns/locale';
+import CommentCard from '@/components/Card/CommentCard';
+import ArticleCard from '@/components/Card/ArticleCard';
+import BrandSlider from '@/components/Slider/BrandSlider';
 
 export default function Home() {
+  const recipeCategoryList = [
+    {
+      title: 'Resep Ayam',
+      img: 'https://img.kurio.network/qQ1Q4CkWVe1xzU29-FGrgv2kHQE=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/c27cd268-b22e-4a3e-93f7-009e7f100696.png',
+    },
+    {
+      title: 'Resep Ikan',
+      img: 'https://img.kurio.network/TPDXnlyFmiN7iTNajfGYvNAxAW4=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/92e7b636-77d8-4de1-8fb7-f4dfe94d4486.png',
+    },
+    {
+      title: 'Resep Tahu',
+      img: 'https://img.kurio.network/3iJaDNr068FpwiMI2LL2sowak7M=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/21/02/26/3d002a88-def5-40c9-bdfe-db8607484a52.png',
+    },
+    {
+      title: 'Resep Tempe',
+      img: 'https://img.kurio.network/KQbqO5SFYgvmIwGXbhFI1nWgUdg=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/21/02/26/d2ba265b-b5db-4c1e-9b91-b17a41979a2a.png',
+    },
+    {
+      title: 'Aneka Nasi',
+      img: 'https://img.kurio.network/WT91T8Po0bWPRcFftjsXK6p7_RU=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/3c68ffd4-0426-4e9f-9655-a29fcb275dfd.png',
+    },
+    {
+      title: 'Resep Roti',
+      img: 'https://img.kurio.network/AZ2dEUf7c4sWHe1p3uIiQ4DPPAg=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/c1bfa9d2-d59e-44ef-885d-c317e5260b08.png',
+    },
+    {
+      title: 'Resep Minuman',
+      img: 'https://img.kurio.network/dNJeYqsrfVTj5tNo6993MG8N3zk=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/a61649fc-c7e3-4892-a9be-f0bcf4046526.png',
+    },
+    {
+      title: 'Cukup 5 Bahan',
+      img: 'https://img.kurio.network/RC95GbxD3ofaIYCVzJcl4MlWoRM=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/63dd71f2-c578-44c8-b805-5a148cf508ba.png',
+    },
+    {
+      title: 'Resep Sehat',
+      img: 'https://img.kurio.network/E4sOeNZ59-gx2Dzj8q1iUrar-N0=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/1da9e588-ad8b-4e9f-85da-4de54fbfd470.png',
+    },
+    {
+      title: 'MPASI',
+      img: 'https://img.kurio.network/ZGHwXa67lA8H4CNZSpzrfOde4mc=/200x200/filters:quality(80)/https://kurio-img.kurioapps.com/20/10/15/34af3374-54c3-440b-884a-bec57e09df6f.png',
+    },
+  ];
+
   return (
     <MainLayout>
       <Head>
@@ -39,16 +82,13 @@ export default function Home() {
           Kategori Resep
         </h2>
         <div className="container flex flex-row flex-wrap justify-around lg:justify-evenly">
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
-          <RecipeCategoryCard className="w-1/5 lg:w-1/10 px-2" />
+          {recipeCategoryList?.map((recipe) => (
+            <RecipeCategoryCard
+              className="w-1/5 lg:w-1/10 px-2"
+              title={recipe.title}
+              img={recipe.img}
+            />
+          ))}
         </div>
       </section>
       <section className="py-5 container mx-auto px-10">
@@ -56,12 +96,12 @@ export default function Home() {
           Menu Hari Ini
           <br />
           <small className="font-normal text-base">
-            {format(new Date(), "dd MMMM yyyy", { locale: id })}
+            {format(new Date(), 'dd MMMM yyyy', { locale: id })}
           </small>
         </h2>
         <div
           className="container flex flex-row w-full lg:overflow-x-auto overflow-x-auto pb-5 "
-          style={{ cursor: "grab" }}
+          style={{ cursor: 'grab' }}
         >
           <RecipeCard
             className="w-3/5 min-w-3/5 lg:w-1/3 lg:min-w-1/3"
@@ -149,78 +189,158 @@ export default function Home() {
       <footer className="text-gray-600 body-font bg-gray-400">
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <img className="object-contain hidden lg:block" src="https://endeus.tv/static/img/brand/endeus_logo.svg" alt="logo" />
-            <img className="object-contain block lg:hidden" src="https://endeus.tv/static/img/brand/endeus_logo-m.svg" alt="logo" />
+            <img
+              className="object-contain hidden lg:block"
+              src="https://endeus.tv/static/img/brand/endeus_logo.svg"
+              alt="logo"
+            />
+            <img
+              className="object-contain block lg:hidden"
+              src="https://endeus.tv/static/img/brand/endeus_logo-m.svg"
+              alt="logo"
+            />
           </div>
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">RESEP</h2>
+              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">
+                RESEP
+              </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">First Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    First Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Second Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Second Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Third Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Third Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Fourth Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Fourth Link
+                  </a>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">HOW-TO</h2>
+              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">
+                HOW-TO
+              </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">First Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    First Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Second Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Second Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Third Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Third Link
+                  </a>
                 </li>
                 <li>
-                  <a className="text-white hover:text-red-300" href="#">Fourth Link</a>
+                  <a className="text-white hover:text-red-300" href="#">
+                    Fourth Link
+                  </a>
                 </li>
               </nav>
             </div>
             <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
-              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">Langganan Newsletter Endeus</h2>
-              <small className="font-normal text-white">Terima Resep-resep terbaru. langsung di emailmu.</small>
+              <h2 className="title-font font-bold text-white tracking-widest text-md mb-3">
+                Langganan Newsletter Endeus
+              </h2>
+              <small className="font-normal text-white">
+                Terima Resep-resep terbaru. langsung di emailmu.
+              </small>
               <div className="relative text-gray-700">
-                <input className="w-full rounded-lg border-none focus:ring-yellow-400" type="text" placeholder="Email" />
-                <button className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-yellow-400 rounded-r-lg font-bold">Langganan </button>
+                <input
+                  className="w-full rounded-lg border-none focus:ring-yellow-400"
+                  type="text"
+                  placeholder="Email"
+                />
+                <button className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-yellow-400 rounded-r-lg font-bold">
+                  Langganan{' '}
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-gray-600">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p className="text-white text-sm text-center sm:text-left">© {new Date().getFullYear()} Ngeunah — <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-400 ml-1" target="_blank">@Ngeunah</a>
+            <p className="text-white text-sm text-center sm:text-left">
+              © {new Date().getFullYear()} Ngeunah —{' '}
+              <a
+                href="https://twitter.com/knyttneve"
+                rel="noopener noreferrer"
+                className="text-gray-400 ml-1"
+                target="_blank"
+              >
+                @Ngeunah
+              </a>
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a className="text-gray-200">
-                <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                <svg
+                  fill="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
                 </svg>
               </a>
               <a className="ml-3 text-gray-200">
-                <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                <svg
+                  fill="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
                 </svg>
               </a>
               <a className="ml-3 text-gray-200">
-                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
                 </svg>
               </a>
               <a className="ml-3 text-gray-200">
-                <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
-                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="0"
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="none"
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  />
                   <circle cx="4" cy="4" r="2" stroke="none" />
                 </svg>
               </a>
