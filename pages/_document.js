@@ -11,6 +11,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&&display=swap"
             rel="stylesheet"
           />
+          <title>Ngeunah</title>
         </Head>
         <body>
           <Main />

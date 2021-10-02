@@ -13,21 +13,17 @@ export default function RecipeCard(props) {
               <div className="absolute -top-1 left-3">
                 <span className="absolute left-4 top-1 z-20 text-white">1</span>
                 <span className="absolute ">
-                  <MdBookmark
-                    size="38"
-                    className="z-50"
-                    color="black"
-                  ></MdBookmark>
+                  <MdBookmark size="38" className="z-50" color="black" />
                 </span>
               </div>
             ) : (
-              <span></span>
+              <span />
             )}
             <picture className="w-full h-full flex justify-center items-center">
               <img
                 src="https://img.kurio.network/jlhOvDAVCeITmfRW26Tt3-o0vJM=/380x380/filters:quality(80)/https://kurio-img.kurioapps.com/21/06/09/b80a7991-a1ae-4246-9060-00687e64a036.jpe"
                 className="object-contain rounded-lg"
-              />
+               alt="recipe-img"/>
             </picture>
             <figcaption className="hidden">Bakwan Sayur</figcaption>
           </figure>
@@ -43,7 +39,7 @@ export default function RecipeCard(props) {
             </div>
           </div>
           <div className="pt-1">
-            <MdBookmarkBorder size="20" className="z-50"></MdBookmarkBorder>
+            <MdBookmarkBorder size="20" className="z-50" />
           </div>
         </div>
       </a>
