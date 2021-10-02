@@ -1,4 +1,3 @@
-import { useRef } from "react";
 // Import Swiper core and required modules
 import SwiperCore, { A11y } from "swiper";
 // Import Swiper React components
@@ -50,7 +49,7 @@ export default function BrandSlider(props) {
             layout={"fill"}
             src="https://img.kurio.network/xBI5QmqTwpSLSmyY_9RfTMtgrXE=/400x600/filters:quality(80)/https://kurio-img.kurioapps.com/20/09/24/09fb8348-3bb4-49f4-8ed9-5a4cf98c348b.jpeg"
           />
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70" />
           <div className="h-1/2 p-5 w-full absolute bottom-0">
             <h1 className="text-white font-extrabold text-3xl">
               Andalan Mama By Filma
@@ -64,7 +63,7 @@ export default function BrandSlider(props) {
             layout={"fill"}
             src="https://img.kurio.network/xBI5QmqTwpSLSmyY_9RfTMtgrXE=/400x600/filters:quality(80)/https://kurio-img.kurioapps.com/20/09/24/09fb8348-3bb4-49f4-8ed9-5a4cf98c348b.jpeg"
           />
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70" />
           <div className="h-1/2 p-5 w-full absolute bottom-0">
             <h1 className="text-white font-extrabold text-3xl">
               Andalan Mama By Filma 2
@@ -78,7 +77,7 @@ export default function BrandSlider(props) {
             layout={"fill"}
             src="https://img.kurio.network/xBI5QmqTwpSLSmyY_9RfTMtgrXE=/400x600/filters:quality(80)/https://kurio-img.kurioapps.com/20/09/24/09fb8348-3bb4-49f4-8ed9-5a4cf98c348b.jpeg"
           />
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70" />
           <div className="h-1/2 p-5 w-full absolute bottom-0">
             <h1 className="text-white font-extrabold text-3xl">
               Andalan Mama By Filma 2
@@ -92,7 +91,7 @@ export default function BrandSlider(props) {
             layout={"fill"}
             src="https://img.kurio.network/xBI5QmqTwpSLSmyY_9RfTMtgrXE=/400x600/filters:quality(80)/https://kurio-img.kurioapps.com/20/09/24/09fb8348-3bb4-49f4-8ed9-5a4cf98c348b.jpeg"
           />
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-black absolute opacity-70" />
           <div className="h-1/2 p-5 w-full absolute bottom-0">
             <h1 className="text-white font-extrabold text-3xl">
               Andalan Mama By Filma 2
