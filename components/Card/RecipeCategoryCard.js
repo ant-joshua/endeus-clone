@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnames from "classnames";
 export default function RecipeCategoryCard(props) {
   const { title, img } = props;
 
@@ -8,7 +8,7 @@ export default function RecipeCategoryCard(props) {
         <div className="rounded-lg bg-white shadow-lg">
           <figure className="relative flex flex-col">
             <picture className="w-full h-full flex justify-center items-center">
-              <img src={img} className="object-contain" />
+              <img src={img} className="object-contain" alt="recipe-img" />
             </picture>
             <figcaption className="hidden">{title}</figcaption>
           </figure>

@@ -60,18 +60,21 @@ export default function CampaignSlider(props) {
         <img
           className="object-cover min-h-full min-w-full object-center"
           src="https://img.kurio.network/cru4jKuEWGgWozgvpMj9aB4ZX54=/668x274/filters:quality(80)/https://kurio-img.kurioapps.com/21/06/08/ad6b02a0-852c-4319-a2c3-a2fb19e98e3a.png"
+          alt="campaign-img"
         />
       </SwiperSlide>
       <SwiperSlide className="campaign-slider flex justify-center pb-10">
         <img
           className="object-cover min-h-full min-w-full object-center"
           src="https://img.kurio.network/S6DVGUJ7ASVMOAHWXZgjjI_liLI=/668x274/filters:quality(80)/https://kurio-img.kurioapps.com/21/08/02/dd381e6e-41ac-418d-8b57-8b4a0f6f49e1.jpe"
+          alt="campaign-img"
         />
       </SwiperSlide>
       <SwiperSlide className="campaign-slider flex justify-center pb-10">
         <img
           className="object-cover min-h-full min-w-full object-center"
           src="https://img.kurio.network/pRIbt9zYXVRli_cCggkuxkf48hg=/668x274/filters:quality(80)/https://kurio-img.kurioapps.com/21/07/12/a8e9cb48-83d8-4240-902a-0da2937fdbb2.png"
+          alt="campaign-img"
         />
       </SwiperSlide>
 

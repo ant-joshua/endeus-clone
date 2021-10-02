@@ -18,7 +18,7 @@ export default function CommentCard(props) {
               <img
                 className="rounded-full h-10 w-10"
                 src="https://img.kurio.network/gXnbjqJ440FmfZ9RLFI9zPhCQhs=/80x80/filters:quality(80)/https://kurio-img.kurioapps.com/21/08/10/0d078725-4255-412e-9142-3207da94e4a2.png"
-              />
+               alt="comment-img"/>
             </div>
             <div className="flex flex-col">
               <span className="text-sm">Antonius Joshua</span>

@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import FacebookIcon from '@/components/Icons/FacebookIcon';
-import InstagramIcon from '@/components/Icons/InstagramIcon';
-import YoutubeIcon from '@/components/Icons/YoutubeIcon';
-import AccountIcon from '@/components/Icons/AccountIcon';
-import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
+import Link from "next/link";
+import FacebookIcon from "@/components/Icons/FacebookIcon";
+import InstagramIcon from "@/components/Icons/InstagramIcon";
+import YoutubeIcon from "@/components/Icons/YoutubeIcon";
+import AccountIcon from "@/components/Icons/AccountIcon";
+import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 
-import { FcPhoneAndroid } from 'react-icons/fc';
+import { FcPhoneAndroid } from "react-icons/fc";
 export default function Navbar() {
   return (
     <>
@@ -39,16 +39,18 @@ export default function Navbar() {
       </div>
       <nav
         className=" mx-auto px-4 flex flex-col items-center bg-white shadow-lg"
-        style={{ zIndex: '200 !important' }}
+        style={{ zIndex: "200 !important" }}
       >
         <div className="container flex w-full justify-between py-3 h-20">
           <img
             className="object-contain hidden lg:block"
             src="https://endeus.tv/static/img/brand/endeus_logo.svg"
+            alt="logo"
           />
           <img
             className="object-contain block lg:hidden"
             src="https://endeus.tv/static/img/brand/endeus_logo-m.svg"
+            alt="logo"
           />
           <div className="w-3/4 mt-2 lg:mt-1 lg:w-full pl-3  lg:mr-5">
             <input

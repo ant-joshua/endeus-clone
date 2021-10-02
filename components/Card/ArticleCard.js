@@ -9,6 +9,7 @@ export default function ArticleCard(props) {
               <img
                 src="https://img.kurio.network/521Y6GapTrNn4jfvEfqEbSNGRoU=/320x180/filters:quality(80)/https://kurio-img.kurioapps.com/21/08/06/f0e5a7d2-f9a3-4810-b7b4-8bc43427c51f.jpe"
                 className="object-cover rounded-lg"
+                alt="card-img"
               />
             </picture>
             <figcaption className="hidden">Bakwan Sayur</figcaption>
@@ -23,7 +24,7 @@ export default function ArticleCard(props) {
               <span className="text-xs ml-1">15 Menit</span>
             </div>
           </div>
-          <div className="pt-1"></div>
+          <div className="pt-1" />
         </div>
       </a>
     </>
