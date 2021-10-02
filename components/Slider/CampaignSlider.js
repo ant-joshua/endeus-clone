@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   MdKeyboardArrowLeft,
   MdKeyboardArrowRight,
-} from "react-icons/all";
+} from "react-icons/md/index";
 import classNames from "classnames";
 
 // install Swiper modules
