@@ -6,8 +6,8 @@ import CampaignSlider from '@/components/Slider/CampaignSlider';
 import format from 'date-fns/format';
 import { id } from 'date-fns/locale';
 import CommentCard from '@/components/Card/CommentCard';
-import ArticleCard from '@/components/Card/ArticleCard';
 import BrandSlider from '@/components/Slider/BrandSlider';
+import ArticleSlider from '@/components/Slider/ArticleSlider';
 import Footer from "@/components/Nav/Footer";
 
 export default function Home() {
@@ -172,10 +172,7 @@ export default function Home() {
           Artikel Terbaru
         </h2>
         <div className="flex flex-row flex-wrap">
-          <ArticleCard className="w-1/2 lg:w-1/4" />
-          <ArticleCard className="w-1/2 lg:w-1/4" />
-          <ArticleCard className="w-1/2 lg:w-1/4" />
-          <ArticleCard className="w-1/2 lg:w-1/4" />
+          <ArticleSlider/>
         </div>
       </section>
       <section className="py-5 container mx-auto px-10">
